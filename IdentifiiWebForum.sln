@@ -7,7 +7,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Identifii.WebApi", "Identif
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Identifii.ForumDBContext", "ForumDBContext\Identifii.ForumDBContext.csproj", "{7A68526B-DB2D-4FD2-933D-24DDDDFD310B}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Identifii.WebUi", "Identifii.WebUi\Identifii.WebUi.csproj", "{D28D6D2B-5104-45FC-A9D6-71E6BA82A920}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Identifii.WebUi", "Identifii.WebUi\Identifii.WebUi.csproj", "{EBD3180A-37BA-40C1-93CA-C441E8A8959F}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -23,10 +23,10 @@ Global
 		{7A68526B-DB2D-4FD2-933D-24DDDDFD310B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7A68526B-DB2D-4FD2-933D-24DDDDFD310B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{7A68526B-DB2D-4FD2-933D-24DDDDFD310B}.Release|Any CPU.Build.0 = Release|Any CPU
-		{D28D6D2B-5104-45FC-A9D6-71E6BA82A920}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{D28D6D2B-5104-45FC-A9D6-71E6BA82A920}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{D28D6D2B-5104-45FC-A9D6-71E6BA82A920}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{D28D6D2B-5104-45FC-A9D6-71E6BA82A920}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EBD3180A-37BA-40C1-93CA-C441E8A8959F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EBD3180A-37BA-40C1-93CA-C441E8A8959F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EBD3180A-37BA-40C1-93CA-C441E8A8959F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EBD3180A-37BA-40C1-93CA-C441E8A8959F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
