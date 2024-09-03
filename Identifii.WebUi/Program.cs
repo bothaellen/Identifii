@@ -1,4 +1,5 @@
 using Identifii.ForumDBContext;
+using Identifii.Services;
 using Identifii.WebUi.Components;
 using Identifii.WebUi.Components.Account;
 
@@ -16,6 +17,7 @@ builder.Services.AddCascadingAuthenticationState();
 builder.Services.AddScoped<IdentityUserAccessor>();
 builder.Services.AddScoped<IdentityRedirectManager>();
 builder.Services.AddScoped<AuthenticationStateProvider, IdentityRevalidatingAuthenticationStateProvider>();
+builder.Services.AddScoped<ICommentService, CommentService>();
 
 builder.Services.AddAuthentication(options =>
     {

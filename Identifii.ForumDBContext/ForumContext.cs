@@ -1,5 +1,4 @@
-﻿using Microsoft.AspNetCore.Identity;
-using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
+﻿using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 
 namespace Identifii.ForumDBContext
@@ -15,7 +14,7 @@ namespace Identifii.ForumDBContext
         FalseInformation
     }
 
-    public class ForumContext : IdentityDbContext<User,IdentityRole<Guid>,Guid>
+    public class ForumContext : IdentityDbContext<User>
     {
         public DbSet<Post> Posts { get; set; }
         public DbSet<Comment> Comments { get; set; }
@@ -33,6 +32,7 @@ namespace Identifii.ForumDBContext
                 .WithMany(u => u.Likes)
                 .HasForeignKey(l => l.UserID)
                 .OnDelete(DeleteBehavior.Restrict);
+
             modelBuilder.Entity<Like>()
                 .HasIndex(l => new { l.UserID, l.PostID })
                 .IsUnique();

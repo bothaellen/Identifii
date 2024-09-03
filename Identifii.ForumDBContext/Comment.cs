@@ -4,12 +4,12 @@
     {
         public int CommentID { get; set; }
         public int PostID { get; set; }
-        public Guid UserID { get; set; }
+        public string UserID { get; set; }
         public string Content { get; set; }
         public DateTime CreatedAt { get; set; }
 
         // Navigation properties
-        public Post Post { get; set; }
-        public User User { get; set; }
+        public virtual Post Post { get; set; }
+        public virtual User User { get; set; }
     }
 }

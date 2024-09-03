@@ -1,0 +1,15 @@
+@Identifii.WebApi_HostAddress = http://localhost:5057
+
+GET {{Identifii.WebApi_HostAddress}}/Posts/
+Accept: application/json
+
+###
+
+GET {{Identifii.WebApi_HostAddress}}/Comments/
+Accept: application/json
+
+###
+
+Get {{Identifii.WebApi_HostAddress}}/Likes/
+Accept: application/json
+
