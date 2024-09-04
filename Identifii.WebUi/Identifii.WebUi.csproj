@@ -15,7 +15,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\ForumDBContext\Identifii.ForumDBContext.csproj" />
     <ProjectReference Include="..\Identifii.ForumDBContext\Identifii.ForumDBContext.csproj" />
     <ProjectReference Include="..\Identifii.Services\Identifii.Services.csproj" />
   </ItemGroup>

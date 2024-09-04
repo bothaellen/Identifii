@@ -1,4 +1,5 @@
 ﻿using Identifii.ForumDBContext;
+using Identifii.Models.Request;
 using Identifii.Services;
 using Microsoft.EntityFrameworkCore;
 
@@ -24,6 +25,13 @@ namespace Identifii.WebApi.Endpoints
                 return comment is not null ? Results.Ok(comment) : Results.NotFound();
             });
 
+            application.MapPost("/comments", async (ICommentService service, CommentRequest commentRequest) =>
+            {
+               
+                var comment = await service.CreateComment(commentRequest);
+
+                return Results.Created($"/comments/{comment.CommentID}", comment);
+            });
 
         }
     }
