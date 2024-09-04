@@ -1,0 +1,38 @@
+@Identifii.WebApi_HostAddress = http://localhost:5057
+
+
+
+
+
+GET {{Identifii.WebApi_HostAddress}}/Posts/
+Accept: application/json
+
+###
+POST {{Identifii.WebApi_HostAddress}}/Posts/
+Content-Type: application/json
+
+{
+  "Title": "This is a sample post",
+  "Content": "Sample content for Sample Post",
+  "UserIdentifier": "43bf34c7-4c6b-4a11-b86c-db453bf820cf"
+}
+###
+
+GET {{Identifii.WebApi_HostAddress}}/Comments/
+Accept: application/json
+
+###
+POST {{Identifii.WebApi_HostAddress}}/Comments/
+Content-Type: application/json
+{
+  "PostId" : "2",
+  "userID":  "43bf34c7-4c6b-4a11-b86c-db453bf820cf",
+  "content": "Comment for Post 01" 
+}
+
+###
+
+Get {{Identifii.WebApi_HostAddress}}/Likes/
+Accept: application/json
+
+

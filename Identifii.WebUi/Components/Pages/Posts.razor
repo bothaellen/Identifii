@@ -1,0 +1,51 @@
+﻿@page "/posts"
+@using Identifii.ForumDBContext
+@using Identifii.Services
+@rendermode InteractiveServer
+
+<PageTitle>Forum Posts</PageTitle>
+
+<h1>Posts</h1>
+@if (posts == null)
+{
+    <p><em>Loading...</em></p>
+}
+else
+{
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Title</th>
+                <th>Content</th>
+                <th>Date</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var post in posts)
+            {
+                <tr>
+                    <td>@post.Title</td>
+                    <td>@post.Content</td>
+                    <td>@post.CreatedAt.ToString("MM/dd/yyyy")</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+}
+@* 
+<p role="status">Current count: @currentCount</p>
+
+<button class="btn btn-primary" @onclick="IncrementCount">Click me</button> *@
+
+@code {
+
+    private List<Post> posts;
+    [Inject]
+    public IPostService postService { get; set; }
+
+    protected override async Task OnInitializedAsync()
+    {
+        posts = await postService.GetPostsAsync();
+    }
+
+}
